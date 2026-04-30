@@ -91,6 +91,7 @@ PACMAN_DEPS=(
     "polkit-gnome:Agente de autenticação"
     "zsh:Shell"
     "ttf-jetbrains-mono-nerd:Fonte JetBrainsMono Nerd"
+    "sddm:Display manager (login screen)"
 )
 
 # Pacotes que só existem no AUR
@@ -294,7 +295,7 @@ step_post_install() {
     fi
 
     # Habilitar serviços
-    local services=("NetworkManager" "bluetooth")
+    local services=("NetworkManager" "bluetooth" "sddm")
     for svc in "${services[@]}"; do
         if systemctl list-unit-files "$svc.service" &>/dev/null; then
             if $DRY_RUN; then
