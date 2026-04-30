@@ -1,0 +1,12 @@
+# Cores geradas pelo matugen (não versionar, são geradas automaticamente)
+dots/.config/hypr/colors.conf
+dots/.config/kitty/colors.conf
+dots/.config/rofi/colors.rasi
+dots/.config/waybar/colors.css
+
+# Symlink do wallpaper atual
+dots/.config/hypr/current_wallpaper
+
+# Ficheiros de sistema
+.DS_Store
+Thumbs.db
