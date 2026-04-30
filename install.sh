@@ -61,6 +61,11 @@ fi
 # ── Dependências ──────────────────────────────────────────────────────────────
 # Formato: "pacote:descrição"
 PACMAN_DEPS=(
+    # Build tools (necessário para AUR)
+    "base-devel:Ferramentas de build"
+    "fakeroot:Necessário para makepkg/AUR"
+    "git:Controle de versão"
+    # Apps
     "hyprland:Compositor Wayland"
     "waybar:Barra de status"
     "hyprlock:Lockscreen"
@@ -151,6 +156,14 @@ check_missing_aur() {
 
 step_install_deps() {
     section "1. Instalando dependências"
+
+    # Garantir base-devel e fakeroot antes de tudo (necessário para AUR)
+    info "Verificando base-devel e fakeroot..."
+    if $DRY_RUN; then
+        info "[dry-run] sudo pacman -S --needed --noconfirm base-devel fakeroot git"
+    else
+        sudo pacman -S --needed --noconfirm base-devel fakeroot git
+    fi
 
     # Pacman
     local missing_pacman
