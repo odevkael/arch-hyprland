@@ -66,12 +66,7 @@ PACMAN_DEPS=(
     "hyprlock:Lockscreen"
     "hypridle:Idle manager"
     "hyprpicker:Color picker"
-    "swww:Wallpaper daemon"
-    "rofi-wayland:Launcher / menu"
     "kitty:Terminal"
-    "swaync:Notification center"
-    "wlogout:Logout menu"
-    "matugen:Gerador de cores Material You"
     "cava:Visualizador de áudio"
     "fastfetch:System info"
     "nautilus:Gerenciador de arquivos"
@@ -93,7 +88,13 @@ PACMAN_DEPS=(
     "ttf-jetbrains-mono-nerd:Fonte JetBrainsMono Nerd"
 )
 
+# Pacotes que só existem no AUR
 AUR_DEPS=(
+    "swww:Wallpaper daemon"
+    "rofi-wayland:Launcher / menu"
+    "swaync:Notification center"
+    "wlogout:Logout menu"
+    "matugen-bin:Gerador de cores Material You"
     "hyprpolkitagent:Agente polkit para Hyprland"
     "oh-my-zsh-git:Framework Zsh"
     "zsh-autosuggestions:Plugin Zsh autosuggestions"
